@@ -1,8 +1,10 @@
 # Installation
 
-git clone 
+git clone https://github.com/soyombo0/vos.git
 
 cd vos
+
+cp .env.example .env
 
 cd docker
 
