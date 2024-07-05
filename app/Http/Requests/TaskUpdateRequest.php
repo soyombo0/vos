@@ -22,9 +22,9 @@ class TaskUpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => ['required', 'string', 'max:20'],
+            'name' => ['string', 'max:20'],
             'description' => ['string', 'max:255'],
-            'status' => ['string', 'max:255'],
+            'status' => ['integer', 'max:255'],
         ];
     }
 }

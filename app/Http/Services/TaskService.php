@@ -42,6 +42,8 @@ class TaskService
     {
         $data = $request->validated();
 
-        return $task->update($data);
+        $task->update($data);
+
+        return $task;
     }
 }

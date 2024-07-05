@@ -22,7 +22,7 @@ class TaskController extends Controller
 
     public function store(TaskStoreRequest $request)
     {
-        return TaskResource::make($request)
+        return TaskResource::make($this->service->store($request))
             ->response()
             ->setStatusCode(201);
     }
@@ -36,7 +36,7 @@ class TaskController extends Controller
 
     public function update(TaskUpdateRequest $request, Task $task)
     {
-        return TaskResource::make($request, $task)
+        return TaskResource::make($this->service->update($request, $task))
             ->response()
             ->setStatusCode(200);
     }
